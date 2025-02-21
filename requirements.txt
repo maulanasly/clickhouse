@@ -1,0 +1,7 @@
+polars==1.22.0
+clickhouse-connect==0.8.15
+clickhouse-driver==0.2.9
+confluent-kafka==2.8.0
+pyspark==3.5.4
+numpy==2.2.3
+pre_commit==4.1.0
