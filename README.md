@@ -1,72 +1,29 @@
 # ClickHouse Service Management
 
-This project uses a `Makefile` to manage the ClickHouse service with Docker Compose. Below are the available commands to start, stop, restart, view logs, check status, clean, build, and pull the latest images for the ClickHouse service.
+Docker Compose based ClickHouse service management using Makefile.
 
 ## Prerequisites
 
-- Docker
-- Docker Compose
+- Docker and Docker Compose
+- Python 3.11
+- Dataset from [Kaggle - Transactions Fraud Datasets](https://www.kaggle.com/datasets/computingvictor/transactions-fraud-datasets)
 
-## Available Commands
+## Quick Start
 
-### Start the ClickHouse Service
-
-To start the ClickHouse service, run:
-
-```sh
-make start
-```
-
-### Stop the ClickHouse Service
-To stop the ClickHouse service, run:
+1. Download and extract the dataset to `./datasets`
+2. Use the following commands to manage the service:
 
 ```sh
-make stop
+make start    # Start service
+make stop     # Stop service
+make restart  # Restart service
+make logs     # View logs
+make status   # Check status
+make clean    # Remove service and volumes
+make build    # Build service
+make pull     # Pull latest images
 ```
 
-### Restart the ClickHouse Service
-To restart the ClickHouse service, run:
-
-```sh
-make restart
-```
-
-### View Logs of the ClickHouse Service
-To view the logs of the ClickHouse service, run:
-
-```sh
-make logs
-```
-
-### Check the Status of the ClickHouse Service
-To check the status of the ClickHouse service, run:
-
-```sh
-make status
-```
-
-### Clean the ClickHouse Service
-To remove the ClickHouse service and its volumes, run:
-
-```sh
-make clean
-```
-
-
-### Build the ClickHouse Service
-To build the ClickHouse service (if needed), run:
-
-```sh
-make build
-```
-
-### Pull the Latest Images for the ClickHouse Service
-To pull the latest images for the ClickHouse service, run:
-
-```sh
-make pull
-```
-
-### Notes
-Ensure that Docker and Docker Compose are installed and running on your machine.
-The Makefile uses docker-compose.yml as the Docker Compose file by default.
+## Notes
+- Ensure Docker and Docker Compose are running
+- Default configuration in `docker-compose.yml`

@@ -37,4 +37,7 @@ build:
 pull:
     docker compose -f $(DOCKER_COMPOSE_FILE) pull
 
+iniitial-data:
+    python3 ./scripts/dataset_importer.py --dataset=./datasets
+
 .PHONY: start stop restart logs status clean build pull
